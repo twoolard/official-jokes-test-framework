@@ -13,7 +13,7 @@ Before you can install pyenv on macOS you will need the XCode command line tools
 ```bash
 xcode-select --install
 ```
-pyenv builds Python from source, which means you’ll need build dependencies to actually use pyenv. I highly recommend using the package manager Homebrew to install those dependencies. if you need instructions on how to install homebrew you can find it [here](https://brew.sh):
+pyenv builds Python from source, which means you’ll need build dependencies to actually use pyenv. I highly recommend using the package manager Homebrew to install those dependencies. If you need instructions on how to install homebrew you can find it [here](https://brew.sh):
 
 ```bash
 brew install openssl readline sqlite3 xz zlib
@@ -48,7 +48,7 @@ pyenv global [PYTHON_VERSION]
 ```
 
 ### Create and Activate Virtual Environments
-At this point you should have pyenv installed. Now you will need install pyenv-virtualenv to create and manage virtual environments. To install pyenv-virtualenv using homebrew run the following:
+At this point you should have pyenv installed. Now you will need to install pyenv-virtualenv to create and manage virtual environments. To install pyenv-virtualenv using homebrew run the following:
 
 ```bash
 brew install pyenv-virtualenv
@@ -59,7 +59,7 @@ Next you will need to add pyenv-virtualenv initializer to shell startup script. 
 echo 'eval "$(pyenv virtualenv-init -)"' >> ~/.zshrc
 ```
 
-Now you can create virtual environments that use the same version of Python, but have their own set of pip installed packages by running the following from the root directory of the project:
+Now you can create virtual environments that use the same version of Python, but have their own set of pip installed. Run the following from the root directory of the project:
 
 ```bash
 pyenv virtualenv <python-version> <name>
