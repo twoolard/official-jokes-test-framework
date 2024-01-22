@@ -33,17 +33,12 @@ def list_response():
 def response_code(response, code):
     assert response.status_code == code
 
-@then(parsers.parse('the returned joke is of type "{type}"'))
-def validate_type(response, type):
-    json = response.json()
-    assert json[0]['type'] == type
-
-@then(parsers.parse('ten jokes are returned'))
+@then('ten jokes are returned')
 def count_list(response):
     json = response.json()
     assert len(json) == 10
 
-@then(parsers.parse('all jokes are of type "{type}"'))
+@then(parsers.parse('the joke(s) are of type "{type}"'))
 def validate_list_type(response, type):
     json = response.json()
     for joke in json:
